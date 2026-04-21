@@ -1,16 +1,17 @@
 package entities;
 
-public class StatusOs {
+public class StatusCronogramas {
     private int codigo;
     private String status;
 
-    public StatusOs(){
+    public StatusCronogramas(){
         codigo = 0;
         status = new String();
     }
     
-    public StatusOs(int codigo, String status){
+    public StatusCronogramas(int codigo, String status){
         this.codigo = codigo;
         this.status = status;
     }
+
 }
