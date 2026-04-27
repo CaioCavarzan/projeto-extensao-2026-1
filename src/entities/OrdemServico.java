@@ -4,19 +4,17 @@ import java.util.ArrayList;
 
 public class OrdemServico {
     private int numero;
-    Cliente cliente; //atributo codigo fk da classe Cliente;
-    Funcionario funcionarioCadastrou; //atributo codigo fk da classe Funcionario;
+    private Cliente cliente; //atributo codigo fk da classe Cliente;
+    private Funcionario funcionarioCadastrou; //atributo codigo fk da classe Funcionario;
     private String dataEntrada;
     private float valorOS;
     private String prioridade;
-    private String dataCriacao;
     private String ultimaAlteracao;
-    Funcionario funcionarioAlterou; //atributo codigo fk da classe Funcionario;
-    ArrayList<Peca> listaPeca;
-    ArrayList<OrdemServico_StatusOs> historico;
+    private Funcionario funcionarioAlterou; //atributo codigo fk da classe Funcionario;
+    private ArrayList<Peca> listaPeca;
+    private ArrayList<HistoricoStatusOs> historico;
 
     //VERIFICAR TIPAGEM DAS DATAS PORQUE OS ATRIBUTOS FORAM CRIADOS COM STRING
-    //VERIFICAR ATRIBUTO 'funcionario_alteracao' DO BANCO. NÃO O CRIEI AQUI
 
     public OrdemServico(){
         numero = 0;
@@ -27,9 +25,11 @@ public class OrdemServico {
         prioridade = new String();
         ultimaAlteracao = new String();
         funcionarioAlterou = new Funcionario();
+        listaPeca = new ArrayList<>();
+        historico = new ArrayList<>();
     }
     
-    public OrdemServico(int numero, Cliente cliente, Funcionario funcionarioCadastrou, String dataEntrada, float valorOS, String prioridade, String ultimaAlteracao, Funcionario funcionarioAlterou){
+    public OrdemServico(int numero, Cliente cliente, Funcionario funcionarioCadastrou, String dataEntrada, float valorOS, String prioridade, String ultimaAlteracao, Funcionario funcionarioAlterou, ArrayList<Peca> listaPeca, ArrayList<HistoricoStatusOs> historico){
         this.numero = numero;
         this.cliente = cliente;
         this.funcionarioCadastrou = funcionarioCadastrou;
@@ -38,5 +38,7 @@ public class OrdemServico {
         this.prioridade = prioridade;
         this.ultimaAlteracao = ultimaAlteracao;
         this.funcionarioAlterou = funcionarioAlterou;
+        this.listaPeca = listaPeca;
+        this.historico = historico;
     }
 }

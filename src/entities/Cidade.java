@@ -3,7 +3,7 @@ package entities;
 public class Cidade {
     private String codigo;
     private String nome;
-    Uf uf; //atributo codigo fk da classe Uf
+    private Uf uf; //atributo codigo fk da classe Uf
 
     public Cidade(){
         codigo = new String();

@@ -1,7 +1,7 @@
 package entities;
 
 public class Funcionario extends Pessoa{
-    Cargo cargo; //atributo codigo fk da classe Cargo
+    private Cargo cargo; //atributo codigo fk da classe Cargo
     private float salario;
 
     public Funcionario(){

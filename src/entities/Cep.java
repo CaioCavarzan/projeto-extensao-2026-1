@@ -2,7 +2,7 @@ package entities;
 
 public class Cep{
     private int numero;
-    Cidade cidade; //atributo codigo fk da classe Cidade
+    private Cidade cidade; //atributo codigo fk da classe Cidade
     
     public Cep(){
         numero = 0;

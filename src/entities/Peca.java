@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Peca {
     private int codigo;
-    OrdemServico os; //atributo codigo fk da classe Os;
-    Tinta tinta; //atributo codigo fk da classe Tinta;
-    ArrayList<TipoServico> servicos; 
-    Funcionario funcionarioCadastrou; //atributo codigo fk da classe Funcionario;
+    private OrdemServico os; //atributo codigo fk da classe Os;
+    private Tinta tinta; //atributo codigo fk da classe Tinta;
+    private ArrayList<TipoServico> servicos; 
+    private Funcionario funcionarioCadastrou; //atributo codigo fk da classe Funcionario;
     private String descricaoPeca;
     private int qtdTotal;
     private String dataEntrada;
@@ -18,10 +18,11 @@ public class Peca {
     private String numeroOse;
     private float scorePrioridade;
     private String ultimaAlteracao;
-    Funcionario funcionarioAlterou; //atributo codigo fk da classe Funcionario;
-    ArrayList<Peca_StatusPeca> historico;
-    ArrayList<Foto> Foto;
-    Producao producao;
+    private Funcionario funcionarioAlterou; //atributo codigo fk da classe Funcionario;
+    private ArrayList<HistoricoStatusPeca> historico;
+    private ArrayList<Foto> foto;
+    //private Producao producao; CONFERIR DEPOIS COM MAIS CALMA
+
     //VERIFICAR TIPAGEM DAS DATAS PORQUE OS ATRIBUTOS FORAM CRIADOS COM STRING
 
     public Peca(){
@@ -41,9 +42,11 @@ public class Peca {
         scorePrioridade = 0;
         ultimaAlteracao = new String();
         funcionarioAlterou = new Funcionario();
+        historico = new ArrayList<>();
+        foto = new ArrayList<>();
     }
 
-    public Peca(int codigo, OrdemServico os, Tinta tinta, ArrayList<TipoServico> servicos, Funcionario funcionarioCadastrou, String descricaoPeca, int qtdTotal, String dataEntrada, String urgencia, String prazoEntrega, float valorItem, String dataFinalizacao, String numeroOse, float scorePrioridade, String ultimaAlteracao, Funcionario funcionarioAlterou){
+    public Peca(int codigo, OrdemServico os, Tinta tinta, ArrayList<TipoServico> servicos, Funcionario funcionarioCadastrou, String descricaoPeca, int qtdTotal, String dataEntrada, String urgencia, String prazoEntrega, float valorItem, String dataFinalizacao, String numeroOse, float scorePrioridade, String ultimaAlteracao, Funcionario funcionarioAlterou, ArrayList<HistoricoStatusPeca> historico, ArrayList<Foto> foto){
         this.codigo = codigo;
         this.os = os;
         this.tinta = tinta;
@@ -60,6 +63,8 @@ public class Peca {
         this.scorePrioridade = scorePrioridade;
         this.ultimaAlteracao = ultimaAlteracao;
         this.funcionarioAlterou = funcionarioAlterou;
+        this.historico = historico;
+        this.foto = foto;
     }
 
 }

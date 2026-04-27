@@ -2,7 +2,7 @@ package entities;
 
 public class Tinta {
     private int codigo;
-    Fornecedor fornecedor; //atributo codigo fk da classe Fornecedor;
+    private Fornecedor fornecedor; //atributo codigo fk da classe Fornecedor;
     private String descricao;
     private String cor;
     private String tipo;

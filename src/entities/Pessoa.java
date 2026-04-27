@@ -3,7 +3,7 @@ package entities;
 public class Pessoa {
     private int codigo;
     private String email;
-    Cep cep; //atributo codigo fk da classe Cep
+    private Cep cep; //atributo codigo fk da classe Cep
     private String logradouro;
     private String numeroCasa;
 

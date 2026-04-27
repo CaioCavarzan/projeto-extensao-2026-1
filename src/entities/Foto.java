@@ -2,7 +2,7 @@ package entities;
 
 public class Foto {
     private int codigo;
-    Peca peca; //atributo codigo fk da classe Peca;
+    private Peca peca; //atributo codigo fk da classe Peca;
     private String foto;
 
     //VERIFICAR O TIPO DE ATRIBUTO PARA FOTO

@@ -2,7 +2,7 @@ package entities;
 
 public class Telefone {
     private String numero;
-    Pessoa pessoa; //atributo código da classe Pessoa;
+    private Pessoa pessoa; //atributo código da classe Pessoa;
     
     public Telefone(){
         numero = new String();
