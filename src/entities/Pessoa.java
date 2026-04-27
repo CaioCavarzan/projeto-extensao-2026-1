@@ -1,24 +1,24 @@
 package entities;
 
-public class Pessoas {
+public class Pessoa {
     private int codigo;
     private String email;
-    Ceps cep; //atributo codigo fk da classe Ceps
+    Cep cep; //atributo codigo fk da classe Cep
     private String logradouro;
     private String numeroCasa;
 
-    public Pessoas(){
+    public Pessoa(){
         codigo = 0;
         email = new String();
-        cep = new Ceps();
+        cep = new Cep();
         logradouro = new String();
         numeroCasa = new String();
     }
 
-        public Pessoas(int codigo, String email, Ceps cep, String logradouro, String numeroCasa){
+        public Pessoa(int codigo, String email, Cep cep, String logradouro, String numeroCasa){
         codigo = 0;
         email = new String();
-        cep = new Ceps();
+        cep = new Cep();
         logradouro = new String();
         numeroCasa = new String();
     }

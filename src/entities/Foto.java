@@ -1,19 +1,19 @@
 package entities;
 
-public class Fotos {
+public class Foto {
     private int codigo;
-    Pecas peca; //atributo codigo fk da classe Pecas;
+    Peca peca; //atributo codigo fk da classe Peca;
     private String foto;
 
     //VERIFICAR O TIPO DE ATRIBUTO PARA FOTO
 
-    public Fotos(){
+    public Foto(){
         codigo = 0;
-        peca = new Pecas();
+        peca = new Peca();
         foto = new String();
     }
 
-    public Fotos(int codigo, Pecas peca, String foto){
+    public Foto(int codigo, Peca peca, String foto){
         this.codigo = codigo;
         this.peca = peca;
         this.foto = foto;

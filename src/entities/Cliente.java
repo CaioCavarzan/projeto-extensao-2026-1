@@ -1,13 +1,13 @@
 package entities;
 
-public class Clientes extends Pessoas {
+public class Cliente extends Pessoa {
     private FonteAquisicao fonte; //atributo codigo fk da classe FonteAquisicao
     private String observacao;
     private String complemento;
     private int prioridade;
 
 
-    public Clientes(){
+    public Cliente(){
         super();
         fonte = new FonteAquisicao();
         observacao = new String();
@@ -15,7 +15,7 @@ public class Clientes extends Pessoas {
         prioridade = 0;
     }
     
-    public Clientes(int codigo, String email, Ceps cep, String logradouro, String numeroCasa, FonteAquisicao fonte, String observacao, String complemento, int prioridade){
+    public Cliente(int codigo, String email, Cep cep, String logradouro, String numeroCasa, FonteAquisicao fonte, String observacao, String complemento, int prioridade){
         super(codigo, email, cep, logradouro, numeroCasa);
         this.fonte = fonte;
         this.observacao = observacao;

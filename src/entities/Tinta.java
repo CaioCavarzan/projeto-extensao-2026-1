@@ -1,8 +1,8 @@
 package entities;
 
-public class Tintas {
+public class Tinta {
     private int codigo;
-    Fornecedores fornecedor; //atributo codigo fk da classe Fornecedores;
+    Fornecedor fornecedor; //atributo codigo fk da classe Fornecedor;
     private String descricao;
     private String cor;
     private String tipo;
@@ -11,9 +11,9 @@ public class Tintas {
     private int estoque;
     private float valorUnitario;
 
-    public Tintas(){
+    public Tinta(){
         codigo = 0;
-        fornecedor = new Fornecedores();
+        fornecedor = new Fornecedor();
         descricao = new String();
         cor = new String();
         tipo = new String();
@@ -23,7 +23,7 @@ public class Tintas {
         valorUnitario = 0;
     }
     
-    public Tintas(int codigo, Fornecedores fornecedor, String descricao, String cor, String tipo, String acabamento, String referenciaFornecedor, int estoque, float valorUnitario){
+    public Tinta(int codigo, Fornecedor fornecedor, String descricao, String cor, String tipo, String acabamento, String referenciaFornecedor, int estoque, float valorUnitario){
         this.codigo = codigo;
         this.fornecedor = fornecedor;
         this.descricao = descricao;

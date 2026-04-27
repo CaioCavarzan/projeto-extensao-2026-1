@@ -1,15 +1,15 @@
 package entities;
 
-public class StatusPecas {
+public class StatusProducao {
     private int codigo;
     private String status;
-    
-    public StatusPecas(){
+
+    public StatusProducao(){
         codigo = 0;
         status = new String();
     }
     
-    public StatusPecas(int codigo, String status){
+    public StatusProducao(int codigo, String status){
         this.codigo = codigo;
         this.status = status;
     }

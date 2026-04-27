@@ -1,17 +1,17 @@
 package entities;
 
-public class Cidades {
+public class Cidade {
     private String codigo;
     private String nome;
-    Ufs uf; //atributo codigo fk da classe Uf
+    Uf uf; //atributo codigo fk da classe Uf
 
-    public Cidades(){
+    public Cidade(){
         codigo = new String();
         nome = new String();
-        uf = new Ufs();
+        uf = new Uf();
     }
 
-    public Cidades(String codigo, String nome, Ufs uf){
+    public Cidade(String codigo, String nome, Uf uf){
         this.codigo = codigo;
         this.nome = nome;
         this.uf = uf;

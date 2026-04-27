@@ -1,6 +1,6 @@
 package entities;
 
-public class PessoaJuridica extends Clientes{
+public class PessoaJuridica extends Cliente{
     private String cnpj;
     private String razaoSocial;
     private String nomeFantasia;
@@ -14,7 +14,7 @@ public class PessoaJuridica extends Clientes{
         inscricaoEstadual = 0;
     }
 
-    public PessoaJuridica(int codigo, String email, Ceps cep, String logradouro, String numeroCasa, FonteAquisicao fonte, String observacao, String complemento, int prioridade, String cnpj, String razaoSocial, String nomeFantasia,int inscricaoestadual ){
+    public PessoaJuridica(int codigo, String email, Cep cep, String logradouro, String numeroCasa, FonteAquisicao fonte, String observacao, String complemento, int prioridade, String cnpj, String razaoSocial, String nomeFantasia,int inscricaoestadual ){
         super(codigo, email, cep, logradouro, numeroCasa, fonte, observacao, complemento, prioridade);
         cnpj = new String();
         razaoSocial = new String();

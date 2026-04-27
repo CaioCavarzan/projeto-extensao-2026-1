@@ -1,15 +1,15 @@
 package entities;
 
-public class StatusProducoes {
+public class StatusCronograma {
     private int codigo;
     private String status;
 
-    public StatusProducoes(){
+    public StatusCronograma(){
         codigo = 0;
         status = new String();
     }
     
-    public StatusProducoes(int codigo, String status){
+    public StatusCronograma(int codigo, String status){
         this.codigo = codigo;
         this.status = status;
     }

@@ -1,9 +1,9 @@
 package entities;
 
-public class Producoes {
+public class Producao {
     private int codigo;
-    Cronogramas cronograma; //Atributo código fk da classe Cronogramas
-    Pecas peca; //Atributo código fk da classe Pecas
+    Cronograma cronograma; //Atributo código fk da classe Cronograma
+    Peca peca; //Atributo código fk da classe Peca
     private String dataExecucao;
     private int qtdProduzida;
     private int qtdDefeito;
@@ -11,17 +11,17 @@ public class Producoes {
 
     //VERIFICAR TIPAGEM DAS DATAS PORQUE OS ATRIBUTOS FORAM CRIADOS COM STRING
 
-    public Producoes(){
+    public Producao(){
         codigo = 0;
-        cronograma = new Cronogramas();
-        peca = new Pecas();
+        cronograma = new Cronograma();
+        peca = new Peca();
         dataExecucao = new String();
         qtdProduzida = 0;
         qtdDefeito = 0;
         observacao = new String();
     }
     
-    public Producoes(int codigo, Cronogramas cronograma, Pecas peca, String dataExecucao, int qtdProduzida, int qtdDefeito, String observacao){
+    public Producao(int codigo, Cronograma cronograma, Peca peca, String dataExecucao, int qtdProduzida, int qtdDefeito, String observacao){
         this.codigo = codigo;
         this.cronograma = cronograma;
         this.peca = peca;

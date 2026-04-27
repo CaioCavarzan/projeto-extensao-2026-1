@@ -1,18 +1,18 @@
 package entities;
 
-public class Cargos {
+public class Cargo {
     private int codigo;
     private String nome;
     private String descricao;
 
 
-    public Cargos(){
+    public Cargo(){
         codigo = 0;
         nome = new String();
         descricao = new String();
     }
 
-    public Cargos(int codigo, String nome, String descricao){
+    public Cargo(int codigo, String nome, String descricao){
         this.codigo = codigo;
         this.nome = nome;
         this.descricao = descricao;
