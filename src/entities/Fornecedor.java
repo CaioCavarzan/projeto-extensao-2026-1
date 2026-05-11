@@ -12,8 +12,8 @@ public class Fornecedor extends Pessoa {
         prazoPagamento = new String();
     }
 
-    public Fornecedor(int codigo, String email, Cep cep, String logradouro, String numeroCasa, String cnpj, boolean status, String prazoPagamento){
-        super(codigo, email, cep, logradouro, numeroCasa);
+    public Fornecedor(int codigo, String email, Cep cep, String logradouro, String numeroCasa, String telefone, String cnpj, boolean status, String prazoPagamento){
+        super(codigo, email, cep, logradouro, numeroCasa, telefone);
         this.cnpj = cnpj;
         this.status = status;
         this.prazoPagamento = prazoPagamento;

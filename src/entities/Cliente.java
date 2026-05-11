@@ -15,8 +15,8 @@ public class Cliente extends Pessoa {
         prioridade = 0;
     }
     
-    public Cliente(int codigo, String email, Cep cep, String logradouro, String numeroCasa, FonteAquisicao fonte, String observacao, String complemento, int prioridade){
-        super(codigo, email, cep, logradouro, numeroCasa);
+    public Cliente(int codigo, String email, Cep cep, String logradouro, String numeroCasa, String telefone, FonteAquisicao fonte, String observacao, String complemento, int prioridade){
+        super(codigo, email, cep, logradouro, numeroCasa, telefone);
         this.fonte = fonte;
         this.observacao = observacao;
         this.complemento = complemento;
