@@ -1,0 +1,141 @@
+insert into Ufs values ('AC', 'Acre')
+insert into Ufs values ('AL', 'Alagoas')
+insert into Ufs values ('AP', 'Amapá')
+insert into Ufs values ('AM', 'Amazonas')
+insert into Ufs values ('BA', 'Bahia')
+insert into Ufs values ('CE', 'Ceará')
+insert into Ufs values ('ES', 'Espírito Santo')
+insert into Ufs values ('GO', 'Goiás')
+insert into Ufs values ('MA', 'Maranhão')
+insert into Ufs values ('MT', 'Mato Grosso')
+insert into Ufs values ('MS', 'Mato Grosso do Sul')
+insert into Ufs values ('MG', 'Minas Gerais')
+insert into Ufs values ('PA', 'Pará')
+insert into Ufs values ('PB', 'Paraíba')
+insert into Ufs values ('PR', 'Paraná')
+insert into Ufs values ('PE', 'Pernambuco')
+insert into Ufs values ('PI', 'Piauí')
+insert into Ufs values ('RJ', 'Rio de Janeiro')
+insert into Ufs values ('RN', 'Rio Grande do Norte')
+insert into Ufs values ('RS', 'Rio Grande do Sul')
+insert into Ufs values ('RO', 'Rondônia')
+insert into Ufs values ('RR', 'Roraima')
+insert into Ufs values ('SC', 'Santa Catarina')
+insert into Ufs values ('SP', 'São Paulo')
+insert into Ufs values ('SE', 'Sergipe')
+insert into Ufs values ('TO', 'Tocantins')
+insert into Ufs values ('DF', 'Distrito Federal') -- Adicionado
+
+select * from Ufs
+
+use banco_fenix2
+go
+
+-- 1. Status das Ordens de Serviço (OS)
+insert into StatusOs (status) VALUES 
+('criada'), ('em produção'), ('concluída'), ('pausada'), ('cancelada');
+go
+
+-- 2. Status das Peças
+insert into StatusPecas (status) VALUES 
+('pendente'), ('em produção'), ('pausada'), ('finalizada'), ('cancelada');
+go
+
+-- 3. Status do Planejamento / Cronograma
+insert into StatusCronograma (status) VALUES 
+('agendado'), ('parcialmente executado'), ('concluído'), ('declinado');
+go
+
+-- 4. Status da Execução / Produção
+insert into StatusProducao (status) VALUES 
+('iniciada'), ('finalizada');
+go
+
+--- Inserts nas tabelas independentes ---
+
+-- 1. tabelas independentes (sem chaves estrangeiras)
+
+insert into Ufs (sigla, nome) VALUES ('AC', 'Acre');
+insert into Ufs (sigla, nome) VALUES ('AL', 'Alagoas');
+insert into Ufs (sigla, nome) VALUES ('AP', 'Amapá');
+insert into Ufs (sigla, nome) VALUES ('AM', 'Amazonas');
+insert into Ufs (sigla, nome) VALUES ('BA', 'Bahia');
+insert into Ufs (sigla, nome) VALUES ('CE', 'Ceará');
+insert into Ufs (sigla, nome) VALUES ('ES', 'Espírito Santo');
+insert into Ufs (sigla, nome) VALUES ('GO', 'Goiás');
+insert into Ufs (sigla, nome) VALUES ('MA', 'Maranhão');
+insert into Ufs (sigla, nome) VALUES ('MT', 'Mato Grosso');
+insert into Ufs (sigla, nome) VALUES ('MS', 'Mato Grosso do Sul');
+insert into Ufs (sigla, nome) VALUES ('MG', 'Minas Gerais');
+insert into Ufs (sigla, nome) VALUES ('PA', 'Pará');
+insert into Ufs (sigla, nome) VALUES ('PB', 'Paraíba');
+insert into Ufs (sigla, nome) VALUES ('PR', 'Paraná');
+insert into Ufs (sigla, nome) VALUES ('PE', 'Pernambuco');
+insert into Ufs (sigla, nome) VALUES ('PI', 'Piauí');
+insert into Ufs (sigla, nome) VALUES ('RJ', 'Rio de Janeiro');
+insert into Ufs (sigla, nome) VALUES ('RN', 'Rio Grande do Norte');
+insert into Ufs (sigla, nome) VALUES ('RS', 'Rio Grande do Sul');
+insert into Ufs (sigla, nome) VALUES ('RO', 'Rondônia');
+insert into Ufs (sigla, nome) VALUES ('RR', 'Roraima');
+insert into Ufs (sigla, nome) VALUES ('SC', 'Santa Catarina');
+insert into Ufs (sigla, nome) VALUES ('SP', 'São Paulo');
+insert into Ufs (sigla, nome) VALUES ('SE', 'Sergipe');
+insert into Ufs (sigla, nome) VALUES ('TO', 'Tocantins');
+insert into Ufs (sigla, nome) VALUES ('DF', 'Distrito Federal');
+
+select * FROM Ufs;
+
+insert into FonteAquisicao (descricao) values ('Instagram')
+insert into FonteAquisicao (descricao) values ('Whatsapp')
+insert into FonteAquisicao (descricao) values ('Facebook')
+insert into FonteAquisicao (descricao) values ('Indicacao')
+insert into FonteAquisicao (descricao) values ('Google')
+insert into FonteAquisicao (descricao) values ('Site')
+insert into FonteAquisicao (descricao) values ('Outros')
+
+select * from FonteAquisicao
+
+create table TipoServico 
+
+inset into TipoServico (tipo) values ('Jato')
+inset into TipoServico (tipo) values ('Pintura')
+
+select * from TipoServico
+
+insert into (status) values ('Criada')
+insert into (status) values ('Em producao')
+insert into (status) values ('Concluida')
+insert into (status) values ('Pausada')
+insert into (status) values ('Cancelada')
+
+select * from StatusOs
+
+create table StatusPecas 
+(
+    codigo int identity(1,1)   not null,
+    status varchar     (25)    not null
+
+	-- Restri��es -- 
+	constraint pk_status_pecas      primary key   (codigo),
+    constraint uq_status_pecas_nome unique        (status)
+)
+go
+
+-- 2. Status das Peças
+insert into StatusPecas (status) VALUES 
+('pendente'), ('em produção'), ('pausada'), ('finalizada'), ('cancelada');
+go
+
+inset into (status) values ('')
+
+create table StatusCronograma 
+(
+    codigo int identity(1,1)   not null,
+    status varchar     (25)    not null
+
+	-- Restri��es -- 
+	constraint pk_status_cronograma   primary key   (codigo),
+    constraint uq_status_crono_nome   unique        (status)
+)
+go
+
