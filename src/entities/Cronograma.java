@@ -1,46 +1,46 @@
 package entities;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Cronograma {
     private int codigo;
-    private String dataPlanejada;
+    private LocalDate dataPlanejada;
     private int qtdPlanejada;
-    private Funcionario funcionarioCadastrou; //Atributo codigo fk da classe Funcionario
+    private Usuario usuarioCadastrou; //Atributo codigo fk da classe Usuario
     private String observacao;
     private int prioridade;
-    private String dataCriacao;
-    private String ultimaAlteracao;
-    private Funcionario funcionarioAlterou; //Atributo codigo fk da classe Funcionario
+    private LocalDateTime dataCriacao;
+    private LocalDateTime ultimaAlteracao;
+    private Usuario usuarioAlterou; //Atributo codigo fk da classe Usuario
     private ServicoAplicadoPeca servicoAplicadoPeca;
     private ArrayList<HistoricoStatusCronograma> historico;
-
-    //VERIFICAR TIPAGEM DAS DATAS PORQUE OS ATRIBUTOS FORAM CRIADOS COM STRING
     
     public Cronograma(){
         codigo = 0;
-        dataPlanejada = new String();
+        dataPlanejada = LocalDate.now();
         qtdPlanejada = 0;
-        funcionarioCadastrou = new Funcionario();
+        usuarioCadastrou = new Usuario();
         observacao = new String();
         prioridade = 0;
-        dataCriacao = new String();
-        ultimaAlteracao = new String();
-        funcionarioAlterou = new Funcionario();
+        dataCriacao = LocalDateTime.now();
+        ultimaAlteracao = LocalDateTime.now();
+        usuarioAlterou = new Usuario();
         servicoAplicadoPeca = new ServicoAplicadoPeca();
         historico = new ArrayList<>();
     }
 
-    public Cronograma(int codigo, String dataPlanejada, int qtdPlanejada, Funcionario funcionarioCadastrou, String observacao, int prioridade, String dataCriacao, String ultimaAlteracao, Funcionario funcionarioAlterou, ServicoAplicadoPeca servicoAplicadoPeca, ArrayList<HistoricoStatusCronograma> historico){
+    public Cronograma(int codigo, LocalDate dataPlanejada, int qtdPlanejada, Usuario usuarioCadastrou, String observacao, int prioridade, LocalDateTime dataCriacao, LocalDateTime ultimaAlteracao, Usuario usuarioAlterou, ServicoAplicadoPeca servicoAplicadoPeca, ArrayList<HistoricoStatusCronograma> historico){
         this.codigo = codigo;
         this.dataPlanejada = dataPlanejada;
         this.qtdPlanejada = qtdPlanejada;
-        this.funcionarioCadastrou = funcionarioCadastrou;
+        this.usuarioCadastrou = usuarioCadastrou;
         this.observacao = observacao;
         this.prioridade = prioridade;
         this.dataCriacao = dataCriacao;
         this.ultimaAlteracao = ultimaAlteracao;
-        this.funcionarioAlterou = funcionarioAlterou;
+        this.usuarioAlterou = usuarioAlterou;
         this.servicoAplicadoPeca = servicoAplicadoPeca;
         this.historico = historico;
     }

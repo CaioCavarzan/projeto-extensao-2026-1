@@ -2,7 +2,7 @@ package entities;
 
 public class Cliente extends Pessoa {
     private FonteAquisicao fonte; //atributo codigo fk da classe FonteAquisicao
-    private String observacao;
+    private String observacao; //VERIFICAR SE ESSE ATRIBUTO PERMANECE
     private String complemento;
     private int prioridade;
 

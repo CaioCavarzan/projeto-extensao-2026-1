@@ -1,19 +1,19 @@
 package entities;
 
+import java.time.LocalDateTime;
+
 public class HistoricoStatusOs {
     private OrdemServico os; //Atributo codigo fk da classe OrdemServico
     private StatusOs status; //Atributo codigo fk da classe StatusOs
-    private String dataHora;
-
-    //VERIFICAR TIPAGEM DAS DATAS PORQUE OS ATRIBUTOS FORAM CRIADOS COM STRING
+    private LocalDateTime dataHora;
 
     public HistoricoStatusOs(){
         os = new OrdemServico();
         status = new StatusOs();
-        dataHora = new String();
+        dataHora = LocalDateTime.now();
     }
 
-    public HistoricoStatusOs(OrdemServico os, StatusOs status, String dataHora){
+    public HistoricoStatusOs(OrdemServico os, StatusOs status, LocalDateTime dataHora){
         this.os = os;
         this.status = status;
         this.dataHora = dataHora;

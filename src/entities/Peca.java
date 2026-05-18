@@ -1,5 +1,7 @@
 package entities;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Peca {
@@ -7,51 +9,49 @@ public class Peca {
     private OrdemServico os; //atributo codigo fk da classe Os;
     private Tinta tinta; //atributo codigo fk da classe Tinta;
     private ArrayList<TipoServico> servicos; 
-    private Funcionario funcionarioCadastrou; //atributo codigo fk da classe Funcionario;
+    private Usuario usuarioCadastrou; //atributo codigo fk da classe Usuario; (ISSO JÁ NÃO É HERDADO DA OS?)
     private String descricaoPeca;
     private int qtdTotal;
-    private String dataEntrada;
+    private LocalDateTime dataEntrada;
     private String urgencia;
     private String prazoEntrega;
     private float valorItem;
-    private String dataFinalizacao;
+    private LocalDate dataFinalizacao;
     private String numeroOse;
     private float scorePrioridade;
-    private String ultimaAlteracao;
-    private Funcionario funcionarioAlterou; //atributo codigo fk da classe Funcionario;
+    private LocalDateTime ultimaAlteracao;
+    private Usuario usuarioAlterou; //atributo codigo fk da classe Usuario; (ISSO JÁ NÃO É HERDADO DA OS?)
     private ArrayList<HistoricoStatusPeca> historico;
-    private ArrayList<Foto> foto;
+    private ArrayList<Foto> fotos;
     //private Producao producao; CONFERIR DEPOIS COM MAIS CALMA
-
-    //VERIFICAR TIPAGEM DAS DATAS PORQUE OS ATRIBUTOS FORAM CRIADOS COM STRING
 
     public Peca(){
         codigo = 0;
         os = new OrdemServico();
         tinta = new Tinta();
         servicos = new ArrayList<>();
-        funcionarioCadastrou = new Funcionario();
+        usuarioCadastrou = new Usuario();
         descricaoPeca = new String();
         qtdTotal = 0;
-        dataEntrada = new String();
+        dataEntrada = LocalDateTime.now();
         urgencia = new String();
         prazoEntrega = new String();
         valorItem = 0;
-        dataFinalizacao = new String();
+        dataFinalizacao = LocalDate.now();
         numeroOse = new String();
         scorePrioridade = 0;
-        ultimaAlteracao = new String();
-        funcionarioAlterou = new Funcionario();
+        ultimaAlteracao = LocalDateTime.now();
+        usuarioAlterou = new Usuario();
         historico = new ArrayList<>();
-        foto = new ArrayList<>();
+        fotos = new ArrayList<>();
     }
 
-    public Peca(int codigo, OrdemServico os, Tinta tinta, ArrayList<TipoServico> servicos, Funcionario funcionarioCadastrou, String descricaoPeca, int qtdTotal, String dataEntrada, String urgencia, String prazoEntrega, float valorItem, String dataFinalizacao, String numeroOse, float scorePrioridade, String ultimaAlteracao, Funcionario funcionarioAlterou, ArrayList<HistoricoStatusPeca> historico, ArrayList<Foto> foto){
+    public Peca(int codigo, OrdemServico os, Tinta tinta, ArrayList<TipoServico> servicos, Usuario usuarioCadastrou, String descricaoPeca, int qtdTotal, LocalDateTime dataEntrada, String urgencia, String prazoEntrega, float valorItem, LocalDate dataFinalizacao, String numeroOse, float scorePrioridade, LocalDateTime ultimaAlteracao, Usuario usuarioAlterou, ArrayList<HistoricoStatusPeca> historico, ArrayList<Foto> fotos){
         this.codigo = codigo;
         this.os = os;
         this.tinta = tinta;
         this.servicos = servicos;
-        this.funcionarioCadastrou = funcionarioCadastrou;
+        this.usuarioCadastrou = usuarioCadastrou;
         this.descricaoPeca = descricaoPeca;
         this.qtdTotal = qtdTotal;
         this.dataEntrada =dataEntrada;
@@ -62,9 +62,9 @@ public class Peca {
         this.numeroOse =numeroOse;
         this.scorePrioridade = scorePrioridade;
         this.ultimaAlteracao = ultimaAlteracao;
-        this.funcionarioAlterou = funcionarioAlterou;
+        this.usuarioAlterou = usuarioAlterou;
         this.historico = historico;
-        this.foto = foto;
+        this.fotos = fotos;
     }
 
 }

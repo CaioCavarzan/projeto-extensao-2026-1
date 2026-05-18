@@ -1,21 +1,21 @@
 package entities;
 
+import java.time.LocalDateTime;
+
 public class HistoricoStatusCronograma {
     private Cronograma cronograma; //Atributo codigo fk da classe Cronograma
     private StatusCronograma statusCronograma; //Atributo codigo fk da classe StatusCronograma
-    private String dataHora;
+    private LocalDateTime dataHora;
     private String observacao;
-
-    //VERIFICAR TIPAGEM DAS DATAS PORQUE OS ATRIBUTOS FORAM CRIADOS COM STRING
     
     public HistoricoStatusCronograma(){
         cronograma = new Cronograma();
         statusCronograma = new StatusCronograma();
-        dataHora = new String();
+        dataHora = LocalDateTime.now();
         observacao = new String();
     }
 
-    public HistoricoStatusCronograma(Cronograma cronograma, StatusCronograma statusCronograma, String dataHora, String observacao){
+    public HistoricoStatusCronograma(Cronograma cronograma, StatusCronograma statusCronograma, LocalDateTime dataHora, String observacao){
         this.cronograma = cronograma;
         this.statusCronograma = statusCronograma;
         this.dataHora = dataHora;
