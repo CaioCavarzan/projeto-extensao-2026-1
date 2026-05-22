@@ -19,4 +19,27 @@ public class HistoricoStatusPeca {
         this.dataHora = dataHora; 
     }
 
+    public Peca getPeca() {
+        return peca;
+    }
+
+    public void setPeca(Peca peca) {
+        this.peca = peca;
+    }
+
+    public StatusPeca getStatusPeca() {
+        return statusPeca;
+    }
+
+    public void setStatusPeca(StatusPeca statusPeca) {
+        this.statusPeca = statusPeca;
+    }
+
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
 }

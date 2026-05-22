@@ -18,4 +18,28 @@ public class Fornecedor extends Pessoa {
         this.status = status;
         this.prazoPagamento = prazoPagamento;
     }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public String getPrazoPagamento() {
+        return prazoPagamento;
+    }
+
+    public void setPrazoPagamento(String prazoPagamento) {
+        this.prazoPagamento = prazoPagamento;
+    }
 }

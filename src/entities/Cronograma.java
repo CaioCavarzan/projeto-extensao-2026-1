@@ -44,4 +44,93 @@ public class Cronograma {
         this.servicoAplicadoPeca = servicoAplicadoPeca;
         this.historico = historico;
     }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public LocalDate getDataPlanejada() {
+        return dataPlanejada;
+    }
+
+    public void setDataPlanejada(LocalDate dataPlanejada) {
+        this.dataPlanejada = dataPlanejada;
+    }
+
+    public int getQtdPlanejada() {
+        return qtdPlanejada;
+    }
+
+    public void setQtdPlanejada(int qtdPlanejada) {
+        this.qtdPlanejada = qtdPlanejada;
+    }
+
+    public Usuario getUsuarioCadastrou() {
+        return usuarioCadastrou;
+    }
+
+    public void setUsuarioCadastrou(Usuario usuarioCadastrou) {
+        this.usuarioCadastrou = usuarioCadastrou;
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
+
+    public int getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(int prioridade) {
+        this.prioridade = prioridade;
+    }
+
+    public LocalDateTime getDataCriacao() {
+        return dataCriacao;
+    }
+
+    public void setDataCriacao(LocalDateTime dataCriacao) {
+        this.dataCriacao = dataCriacao;
+    }
+
+    public LocalDateTime getUltimaAlteracao() {
+        return ultimaAlteracao;
+    }
+
+    public void setUltimaAlteracao(LocalDateTime ultimaAlteracao) {
+        this.ultimaAlteracao = ultimaAlteracao;
+    }
+
+    public Usuario getUsuarioAlterou() {
+        return usuarioAlterou;
+    }
+
+    public void setUsuarioAlterou(Usuario usuarioAlterou) {
+        this.usuarioAlterou = usuarioAlterou;
+    }
+
+    public ServicoAplicadoPeca getServicoAplicadoPeca() {
+        return servicoAplicadoPeca;
+    }
+
+    public void setServicoAplicadoPeca(ServicoAplicadoPeca servicoAplicadoPeca) {
+        this.servicoAplicadoPeca = servicoAplicadoPeca;
+    }
+
+    public ArrayList<HistoricoStatusCronograma> getHistorico() {
+        return historico;
+    }
+
+    public void setHistorico(ArrayList<HistoricoStatusCronograma> historico) {
+        this.historico = historico;
+    }
+
 }

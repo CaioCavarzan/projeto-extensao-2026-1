@@ -21,4 +21,36 @@ public class HistoricoStatusCronograma {
         this.dataHora = dataHora;
         this.observacao = observacao;
     }
+
+    public Cronograma getCronograma() {
+        return cronograma;
+    }
+
+    public void setCronograma(Cronograma cronograma) {
+        this.cronograma = cronograma;
+    }
+
+    public StatusCronograma getStatusCronograma() {
+        return statusCronograma;
+    }
+
+    public void setStatusCronograma(StatusCronograma statusCronograma) {
+        this.statusCronograma = statusCronograma;
+    }
+
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
 }

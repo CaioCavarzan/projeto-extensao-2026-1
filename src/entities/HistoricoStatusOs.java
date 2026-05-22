@@ -19,4 +19,27 @@ public class HistoricoStatusOs {
         this.dataHora = dataHora;
     }
 
+    public OrdemServico getOs() {
+        return os;
+    }
+
+    public void setOs(OrdemServico os) {
+        this.os = os;
+    }
+
+    public StatusOs getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusOs status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
 }
