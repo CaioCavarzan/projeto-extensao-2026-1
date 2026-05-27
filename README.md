@@ -1,18 +1,30 @@
-## Getting Started
+# Projeto de Extensão Comunitária (Metalúrgica Fênix)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+> Projeto de Extensão desenvolvido para as disciplinas de Engenharia de Software, Linguagem de Programação I e Banco de Dados do curso Informática para Negócios
 
-## Folder Structure
+## 📝 Descrição
+Este software foi desenvolvido com o objetivo de informatizar, organizar e controlar todo o fluxo operacional, produtivo e administrativo da empresa, especialmente os processos relacionados aos serviços de pintura eletrostática a pó e jato em peças metálicas.
 
-The workspace contains two folders by default, where:
+## 🚀 Tecnologias Utilizadas
+- **Linguagens:** Java, SQL, JavaScript
+- **Frameworks:** React
+- **Banco de Dados Relacional:** SQL Server
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🛠️ Funcionalidades Principais
+- [ ] Cadastro de usuários.
+- [ ] Cadastro de ordens de serviço.
+- [ ] Geração de logs de produção.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 📂 Como rodar o projeto
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. **Pré-requisitos:**
+   - Ter instalado: Node.js / Java JDK
+   - Ter o SQL Server configurado.
 
-## Dependency Management
+2. **Passo a passo:**
+   ```bash
+   # Clone este repositório
+   git clone [https://github.com/CaioCavarzan/projeto-extensao-2026-1.git](https://github.com/CaioCavarzan/projeto-extensao-2026-1.git)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+   # Entre na pasta
+   cd projeto-extensao-2026-1
