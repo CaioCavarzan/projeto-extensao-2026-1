@@ -215,6 +215,7 @@ create table Tintas
     estoque           decimal(10, 2) not null default 0,
     valor_unit        decimal(18, 2) not null          , 
 
+    -- Restricoes --
     constraint pk_tintas              primary key (codigo),
     constraint fk_tintas_fornecedores foreign key (fornecedor_codigo) references Fornecedores(pessoa_codigo),
     constraint ck_tintas_valor        check       (valor_unit >= 0),  -- Restrição para que o valor unitário da tinta não possa ser negativo
@@ -231,6 +232,7 @@ create table OrdensDeServico
     valor_os       decimal(18, 2)        ,
     prioridade     int                   ,
 
+    -- Restricoes --
     constraint pk_ordens_servico primary key (nr_os),
     constraint fk_os_clientes    foreign key (cliente_codigo) references Clientes(pessoa_codigo),
     constraint fk_os_usuarios    foreign key (usuario_codigo) references Usuarios(funcionario_codigo),
@@ -254,6 +256,7 @@ create table Pecas
     nr_ose           varchar(50)          ,
     score_prioridade decimal(6,2)         ,    
 
+    -- Restricoes --
     constraint pk_pecas          primary key (codigo),
     constraint fk_pecas_os       foreign key (os_codigo)    references OrdensDeServico(nr_os),
     constraint fk_pecas_tintas   foreign key (tinta_codigo) references Tintas(codigo),
@@ -269,6 +272,7 @@ create table Fotos
     peca_codigo int          not null, -- Chave estrangeira ligada à tabela Pecas
     foto        varchar(MAX)         , -- Correção do Sérgio
     
+    -- Restricoes --
     constraint pk_fotos      primary key (codigo),
     constraint fk_fotos_pecas foreign key (peca_codigo) references Pecas(codigo)
 )
@@ -280,6 +284,7 @@ create table Pecas_TipoServico
     tipo_servico_codigo int not null, 
     peca_codigo         int not null, 
 
+    -- Restricoes --
     constraint pk_pecas_tiposervico primary key (tipo_servico_codigo, peca_codigo),
     constraint fk_pts_servico       foreign key (tipo_servico_codigo) references TipoServico(codigo), 
     constraint fk_pts_peca          foreign key (peca_codigo)         references Pecas(codigo)        
@@ -300,6 +305,7 @@ create table Cronograma
     ultima_alteracao    datetime              ,
     usuario_alteracao   int                   ,
 
+    -- Restricoes --
     constraint pk_cronograma          primary key (codigo),
     constraint fk_cronograma_usuarios foreign key (usuario_codigo)                   references Usuarios(funcionario_codigo),
     constraint fk_crono_pts           foreign key (tipo_servico_codigo, peca_codigo) references Pecas_TipoServico(tipo_servico_codigo, peca_codigo),
@@ -320,6 +326,7 @@ create table Producao
     qtd_defeito         int      default 0    ,
     observacao          varchar(max)          ,
 
+    -- Restricoes --
     constraint pk_producao            primary key (codigo),
     constraint fk_producao_cronograma foreign key (cronograma_codigo)                references Cronograma(codigo),
     constraint fk_producao_pts        foreign key (tipo_servico_codigo, peca_codigo) references Pecas_TipoServico(tipo_servico_codigo, peca_codigo),
@@ -335,7 +342,8 @@ create table Producao_Funcionarios
 (
     producao_codigo    int not null, -- Chave estrangeira ligada à tabela Producao
     funcionario_codigo int not null, -- Chave estrangeira ligada à tabela Funcionarios
-                                        
+
+    -- Restricoes --                                
     constraint pk_producao_funcionarios primary key (producao_codigo, funcionario_codigo),
     constraint fk_pf_producao           foreign key (producao_codigo)    references Producao(codigo),
     constraint fk_pf_func               foreign key (funcionario_codigo) references Funcionarios(pessoa_codigo)
@@ -348,6 +356,7 @@ create table Os_Status
     status_codigo int      not null, -- Chave estrangeira ligada à tabela StatusOs
     data_hora     datetime not null, 
     
+    -- Restricoes --
     constraint pk_os_status       primary key (os_codigo, status_codigo), -- Fechamento do parêntese corrigido
     constraint fk_osstatus_os     foreign key (os_codigo)     references OrdensDeServico(nr_os),
     constraint fk_osstatus_status foreign key (status_codigo) references StatusOs(codigo)
@@ -360,6 +369,7 @@ create table Pecas_Status
     status_peca_codigo int      not null, -- Chave estrangeira ligada à tabela StatusPecas
     data_hora          datetime not null, 
     
+    -- Restricoes --
     constraint pk_pecas_status      primary key (peca_codigo, status_peca_codigo),
     constraint fk_pecastatus_peca   foreign key (peca_codigo)        references Pecas(codigo),
     constraint fk_pecastatus_status foreign key (status_peca_codigo) references StatusPecas(codigo)
@@ -373,6 +383,7 @@ create table Cronograma_Status
     data_hora                datetime not null,
     observacao               varchar(300)     ,
 
+    -- Restricoes --
     constraint pk_cronograma_status  primary key (cronograma_codigo, status_cronograma_codigo),
     constraint fk_cronostatus_crono  foreign key (cronograma_codigo)        references Cronograma(codigo),
     constraint fk_cronostatus_status foreign key (status_cronograma_codigo) references StatusCronograma(codigo)
